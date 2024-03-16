@@ -2,11 +2,12 @@ const steamUser = require('steam-user');
 const steamTotp = require('steam-totp');
 const keep_alive = require('./keep_alive.js')
 
+
 var username = process.env.username;
 var password = process.env.password;
 var shared_secret = process.env.shared;
 
-var games = [730, 440, 570];  // Enter here AppIDs of the needed games
+var games = [730, 440, 570, 1583320];  // Enter here AppIDs of the needed games
 var status = 1;  // 1 - online, 7 - invisible
 
 
@@ -34,3 +35,4 @@ user.on('loggedOn', () => {
 // 	user2.setPersona(status2);               
 // 	user2.gamesPlayed(games2);
 // });
+
